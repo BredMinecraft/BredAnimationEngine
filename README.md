@@ -2,10 +2,6 @@
 
 English interface for macOS 13 and later. Existing libraries, settings, media and prepared frame caches remain compatible.
 
-## Folder name correction
-
-I made a mistake in the earlier instructions: the correct project root folder is **`BredAnimationEngine-4`**, not `BredAnimationEngine`. Run the build script from that folder.
-
 ## Build and launch
 
 Install Apple Command Line Tools if needed: `xcode-select --install`.
