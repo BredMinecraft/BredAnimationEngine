@@ -7,7 +7,7 @@ Natywna aplikacja Swift/AppKit/SwiftUI. Wygląd inspirowany dostarczonymi screen
 Wymagany macOS 13+ i Apple Command Line Tools (`xcode-select --install`). Rozpakuj projekt, zakończ poprzednią instancję przez ikonę w pasku menu i uruchom w Terminalu:
 
 ```bash
-bash ~/Downloads/BredAnimationEngine/build.command
+bash ~/Downloads/BredAnimationEngine-4/build.command
 ```
 
 Jeśli folder znajduje się gdzie indziej, użyj właściwej ścieżki. Skrypt tworzy i uruchamia `build/Bred Animation Engine.app`. Aplikację można przenieść do Aplikacji. Budowanie nie pobiera zależności.

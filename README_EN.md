@@ -2,13 +2,17 @@
 
 English interface for macOS 13 and later. Existing libraries, settings, media and prepared frame caches remain compatible.
 
+## Folder name correction
+
+I made a mistake in the earlier instructions: the correct project root folder is **`BredAnimationEngine-4`**, not `BredAnimationEngine`. Run the build script from that folder.
+
 ## Build and launch
 
 Install Apple Command Line Tools if needed: `xcode-select --install`.
 Quit the previous app using its menu bar icon, extract this project and run:
 
 ```bash
-bash ~/Downloads/BredAnimationEngine/build.command
+bash ~/Downloads/BredAnimationEngine-4/build.command
 ```
 
 Use the actual project path if extracted elsewhere. The result is `build/Bred Animation Engine.app`. Move it to Applications if desired.
@@ -30,3 +34,7 @@ Workshop, OBS, external AnimaEngine companion apps, AI tools and MP4 conversion 
 This English update changes interface text and build messages only. The project was prepared on Linux without the macOS SDK; compilation and UI behavior require verification on a Mac. The earlier Polish README contains additional implementation details.
 
 Version 1.0.2: desktop rotation and flips now target a dedicated image sublayer rather than the AppKit-managed view layer. Frame updates replace only the image contents and preserve orientation. Requires verification on macOS.
+
+## Application icon
+
+The supplied bread icon is in `Assets/bredanimengine.png`. The build script uses macOS sips and iconutil to generate AppIcon.icns and includes it in the app bundle. Upload the Assets folder together with Sources and build.command when updating the repository. The app remains hidden from the Dock.

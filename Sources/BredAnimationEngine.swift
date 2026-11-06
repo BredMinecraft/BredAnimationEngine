@@ -454,7 +454,11 @@ struct LibraryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(spacing: 12) {
-                Image(systemName: "sparkles.rectangle.stack.fill").font(.system(size: 26)).foregroundColor(.purple)
+                if let url = Bundle.main.url(forResource: "BrandIcon", withExtension: "png"), let icon = NSImage(contentsOf: url) {
+                    Image(nsImage: icon).resizable().scaledToFit().frame(width: 36, height: 36)
+                } else {
+                    Image(systemName: "sparkles.rectangle.stack.fill").font(.system(size: 26)).foregroundColor(.purple)
+                }
                 VStack(alignment: .leading, spacing: 5) { Text("Bred Animation Engine").bold(); Text("Desktop animation engine").font(.system(size: 10)).foregroundColor(.secondary) }
                 Spacer()
                 Button { engine.toggleHidden() } label: { Image(systemName: "eye") }.buttonStyle(.plain)
